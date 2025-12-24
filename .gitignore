@@ -1,0 +1,7 @@
+# ignore all files
+*
+
+# didn't dismiss these folders and files
+
+!.gitignore
+!

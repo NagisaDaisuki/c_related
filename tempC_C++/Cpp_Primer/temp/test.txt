@@ -1,4 +1,0 @@
-"hello world"
-"I'm the storm of the word"
-"testing will be executed,finally done"
-"golden memory"
