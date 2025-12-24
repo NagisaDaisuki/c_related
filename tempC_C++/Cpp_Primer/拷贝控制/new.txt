@@ -1,0 +1,544 @@
+Mar 12 10:11:43 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit UNIT has entered the 'failed' state with result 'exit-code'.
+Mar 12 10:11:43 Nagisa systemd[1436]: Failed to start Portal service (Hyprland implementation).
+░░ Subject: A start job for unit UNIT has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished with a failure.
+░░ 
+░░ The job identifier is 215 and the job result is failed.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Scheduled restart job, restart counter is at 3.
+░░ Subject: Automatic restarting of a unit has been scheduled
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ Automatic restarting of the unit UNIT has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Mar 12 10:11:44 Nagisa systemd[1436]: Starting Portal service (Hyprland implementation)...
+░░ Subject: A start job for unit UNIT has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has begun execution.
+░░ 
+░░ The job identifier is 235.
+Mar 12 10:11:44 Nagisa xdg-desktop-portal-hyprland[1724]: [LOG] Initializing xdph...
+Mar 12 10:11:44 Nagisa xdg-desktop-portal-hyprland[1724]: [CRITICAL] Couldn't create the dbus connection ([org.freedesktop.DBus.Error.FileExists] Failed to request bus name (File exists))
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ An ExecStart= process belonging to unit UNIT has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 1.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit UNIT has entered the 'failed' state with result 'exit-code'.
+Mar 12 10:11:44 Nagisa systemd[1436]: Failed to start Portal service (Hyprland implementation).
+░░ Subject: A start job for unit UNIT has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished with a failure.
+░░ 
+░░ The job identifier is 235 and the job result is failed.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Scheduled restart job, restart counter is at 4.
+░░ Subject: Automatic restarting of a unit has been scheduled
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ Automatic restarting of the unit UNIT has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Mar 12 10:11:44 Nagisa systemd[1436]: Starting Portal service (Hyprland implementation)...
+░░ Subject: A start job for unit UNIT has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has begun execution.
+░░ 
+░░ The job identifier is 255.
+Mar 12 10:11:44 Nagisa xdg-desktop-portal-hyprland[1726]: [LOG] Initializing xdph...
+Mar 12 10:11:44 Nagisa xdg-desktop-portal-hyprland[1726]: [CRITICAL] Couldn't create the dbus connection ([org.freedesktop.DBus.Error.FileExists] Failed to request bus name (File exists))
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ An ExecStart= process belonging to unit UNIT has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 1.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit UNIT has entered the 'failed' state with result 'exit-code'.
+Mar 12 10:11:44 Nagisa systemd[1436]: Failed to start Portal service (Hyprland implementation).
+░░ Subject: A start job for unit UNIT has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished with a failure.
+░░ 
+░░ The job identifier is 255 and the job result is failed.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Scheduled restart job, restart counter is at 5.
+░░ Subject: Automatic restarting of a unit has been scheduled
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ Automatic restarting of the unit UNIT has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Start request repeated too quickly.
+Mar 12 10:11:44 Nagisa systemd[1436]: xdg-desktop-portal-hyprland.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit UNIT has entered the 'failed' state with result 'exit-code'.
+Mar 12 10:11:44 Nagisa systemd[1436]: Failed to start Portal service (Hyprland implementation).
+░░ Subject: A start job for unit UNIT has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished with a failure.
+░░ 
+░░ The job identifier is 275 and the job result is failed.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Supervising 4 threads of 2 processes of 1 users.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Supervising 4 threads of 2 processes of 1 users.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Supervising 4 threads of 2 processes of 1 users.
+Mar 12 10:11:44 Nagisa systemd[1436]: Started PipeWire PulseAudio.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished successfully.
+░░ 
+░░ The job identifier is 295.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Successfully made thread 1747 of process 1747 owned by '1000' high priority at nice level -11.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Supervising 5 threads of 3 processes of 1 users.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Successfully made thread 1750 of process 1747 owned by '1000' RT at priority 20.
+Mar 12 10:11:44 Nagisa rtkit-daemon[1638]: Supervising 6 threads of 3 processes of 1 users.
+Mar 12 10:11:49 Nagisa systemd[1436]: Starting Lightweight Wayland notification daemon...
+░░ Subject: A start job for unit UNIT has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has begun execution.
+░░ 
+░░ The job identifier is 319.
+Mar 12 10:11:49 Nagisa systemd[1436]: Started Lightweight Wayland notification daemon.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished successfully.
+░░ 
+░░ The job identifier is 319.
+Mar 12 10:11:50 Nagisa systemd[1]: Stopping User Manager for UID 970...
+░░ Subject: A stop job for unit user@970.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit user@970.service has begun execution.
+░░ 
+░░ The job identifier is 1515.
+Mar 12 10:11:50 Nagisa systemd[1392]: Activating special unit Exit the Session...
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped target Main User Target.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 41 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped target Basic System.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 62 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped target Paths.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 65 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped target Sockets.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 63 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped target Timers.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 64 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG network certificate management daemon.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 58 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 59 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 55 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 53 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG cryptographic agent and passphrase cache.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 51 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed GnuPG public key management service.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 56 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed p11-kit server.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 39 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed PipeWire PulseAudio.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 46 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed PipeWire Multimedia System Sockets.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 48 and the job result is done.
+Mar 12 10:11:50 Nagisa dbus-broker[1408]: Dispatched 158 messages @ 2(±4)μs / message.
+░░ Subject: Dispatched 158 messages
+░░ Defined-By: dbus-broker
+░░ Support: https://groups.google.com/forum/#!forum/bus1-devel
+░░ 
+░░ This message is printed by dbus-broker when shutting down. It includes metric
+░░ information collected during the runtime of dbus-broker.
+░░ 
+░░ The message lists the number of dispatched messages
+░░ (in this case 158) as well as the mean time to
+░░ handling a single message. The time measurements exclude the time spent on
+░░ writing to and reading from the kernel.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopping D-Bus User Message Bus...
+░░ Subject: A stop job for unit UNIT has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has begun execution.
+░░ 
+░░ The job identifier is 61.
+Mar 12 10:11:50 Nagisa systemd[1392]: Stopped D-Bus User Message Bus.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 61 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Removed slice User Core Session Slice.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 66 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Closed D-Bus User Message Bus Socket.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 60 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Removed slice User Application Slice.
+░░ Subject: A stop job for unit UNIT has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit UNIT has finished.
+░░ 
+░░ The job identifier is 44 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1392]: Reached target Shutdown.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished successfully.
+░░ 
+░░ The job identifier is 38.
+Mar 12 10:11:50 Nagisa systemd[1392]: Finished Exit the Session.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished successfully.
+░░ 
+░░ The job identifier is 36.
+Mar 12 10:11:50 Nagisa systemd[1392]: Reached target Exit the Session.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit UNIT has finished successfully.
+░░ 
+░░ The job identifier is 35.
+Mar 12 10:11:50 Nagisa (sd-pam)[1394]: pam_unix(systemd-user:session): session closed for user sddm
+Mar 12 10:11:50 Nagisa systemd[1]: user@970.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit user@970.service has successfully entered the 'dead' state.
+Mar 12 10:11:50 Nagisa systemd[1]: Stopped User Manager for UID 970.
+░░ Subject: A stop job for unit user@970.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit user@970.service has finished.
+░░ 
+░░ The job identifier is 1515 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1]: Stopping User Runtime Directory /run/user/970...
+░░ Subject: A stop job for unit user-runtime-dir@970.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit user-runtime-dir@970.service has begun execution.
+░░ 
+░░ The job identifier is 1516.
+Mar 12 10:11:50 Nagisa systemd[1]: run-user-970.mount: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit run-user-970.mount has successfully entered the 'dead' state.
+Mar 12 10:11:50 Nagisa systemd[1]: user-runtime-dir@970.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit user-runtime-dir@970.service has successfully entered the 'dead' state.
+Mar 12 10:11:50 Nagisa systemd[1]: Stopped User Runtime Directory /run/user/970.
+░░ Subject: A stop job for unit user-runtime-dir@970.service has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit user-runtime-dir@970.service has finished.
+░░ 
+░░ The job identifier is 1516 and the job result is done.
+Mar 12 10:11:50 Nagisa systemd[1]: Removed slice User Slice of UID 970.
+░░ Subject: A stop job for unit user-970.slice has finished
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A stop job for unit user-970.slice has finished.
+░░ 
+░░ The job identifier is 1518 and the job result is done.
+Mar 12 10:11:53 Nagisa systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit NetworkManager-dispatcher.service has successfully entered the 'dead' state.
+Mar 12 10:12:04 Nagisa systemd-timesyncd[891]: Contacted time server 139.199.214.202:123 (2.arch.pool.ntp.org).
+Mar 12 10:12:04 Nagisa systemd-timesyncd[891]: Initial clock synchronization to Tue 2024-03-12 10:12:04.861337 CST.
+░░ Subject: Initial clock synchronization
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ For the first time during the current boot an NTP synchronization has been
+░░ acquired and the local system clock adjustment has been initiated.
+Mar 12 10:12:05 Nagisa systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit systemd-hostnamed.service has successfully entered the 'dead' state.
+Mar 12 10:12:12 Nagisa polkitd[1461]: Registered Authentication Agent for unix-process:1918:4403 (system bus name :1.34 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar 12 10:12:14 Nagisa polkitd[1461]: Operator of unix-session:2 successfully authenticated as unix-user:Nagisa to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.33 [systemctl start sshd.service] (owned by unix-user:Nagisa)
+Mar 12 10:12:14 Nagisa systemd[1]: SSH Key Generation was skipped because no trigger condition checks were met.
+░░ Subject: A start job for unit sshdgenkeys.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit sshdgenkeys.service has finished successfully.
+░░ 
+░░ The job identifier is 1630.
+Mar 12 10:12:14 Nagisa systemd[1]: Started OpenSSH Daemon.
+░░ Subject: A start job for unit sshd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit sshd.service has finished successfully.
+░░ 
+░░ The job identifier is 1520.
+Mar 12 10:12:14 Nagisa polkitd[1461]: Unregistered Authentication Agent for unix-process:1918:4403 (system bus name :1.34, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar 12 10:12:14 Nagisa sshd[1972]: Server listening on 0.0.0.0 port 22.
+Mar 12 10:12:14 Nagisa sshd[1972]: Server listening on :: port 22.
+Mar 12 10:12:38 Nagisa sshd[1997]: Accepted password for Nagisa from 192.168.1.103 port 3614 ssh2
+Mar 12 10:12:38 Nagisa sshd[1997]: pam_unix(sshd:session): session opened for user Nagisa(uid=1000) by Nagisa(uid=0)
+Mar 12 10:12:38 Nagisa systemd-logind[904]: New session 4 of user Nagisa.
+░░ Subject: A new session 4 has been created for user Nagisa
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ Documentation: sd-login(3)
+░░ 
+░░ A new session with the ID 4 has been created for the user Nagisa.
+░░ 
+░░ The leading process of the session is 1997.
+Mar 12 10:12:38 Nagisa systemd[1]: Started Session 4 of User Nagisa.
+░░ Subject: A start job for unit session-4.scope has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit session-4.scope has finished successfully.
+░░ 
+░░ The job identifier is 1631.
+Mar 12 10:26:41 Nagisa systemd[1]: Starting Cleanup of Temporary Directories...
+░░ Subject: A start job for unit systemd-tmpfiles-clean.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit systemd-tmpfiles-clean.service has begun execution.
+░░ 
+░░ The job identifier is 1745.
+Mar 12 10:26:41 Nagisa systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit systemd-tmpfiles-clean.service has successfully entered the 'dead' state.
+Mar 12 10:26:42 Nagisa systemd[1]: Finished Cleanup of Temporary Directories.
+░░ Subject: A start job for unit systemd-tmpfiles-clean.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit systemd-tmpfiles-clean.service has finished successfully.
+░░ 
+░░ The job identifier is 1745.
+Mar 12 10:47:02 Nagisa kernel: warning: `ThreadPoolForeg' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+Mar 12 11:00:11 Nagisa systemd[1]: Started Timeline of Snapper Snapshots.
+░░ Subject: A start job for unit snapper-timeline.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit snapper-timeline.service has finished successfully.
+░░ 
+░░ The job identifier is 1752.
+Mar 12 11:00:11 Nagisa systemd[1]: Starting DBus interface for snapper...
+░░ Subject: A start job for unit snapperd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit snapperd.service has begun execution.
+░░ 
+░░ The job identifier is 1862.
+Mar 12 11:00:11 Nagisa systemd[1]: Started DBus interface for snapper.
+░░ Subject: A start job for unit snapperd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit snapperd.service has finished successfully.
+░░ 
+░░ The job identifier is 1862.
+Mar 12 11:00:11 Nagisa systemd-helper[4942]: running timeline for 'root'.
+Mar 12 11:00:12 Nagisa systemd[1]: snapper-timeline.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit snapper-timeline.service has successfully entered the 'dead' state.
+Mar 12 11:00:17 Nagisa wpa_supplicant[1100]: wlp1s0: WPA: Group rekeying completed with 90:76:9f:b8:f6:29 [GTK=CCMP]
+Mar 12 11:01:00 Nagisa CROND[4968]: (root) CMD (run-parts /etc/cron.hourly)
+Mar 12 11:01:00 Nagisa CROND[4967]: (root) CMDEND (run-parts /etc/cron.hourly)
+Mar 12 11:02:00 Nagisa systemd[1]: snapperd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit snapperd.service has successfully entered the 'dead' state.
+Mar 12 11:11:43 Nagisa NetworkManager[902]: <info>  [1710213103.7351] dhcp4 (wlp1s0): state changed new lease, address=192.168.1.104
+Mar 12 11:11:43 Nagisa systemd[1]: Starting Network Manager Script Dispatcher Service...
+░░ Subject: A start job for unit NetworkManager-dispatcher.service has begun execution
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit NetworkManager-dispatcher.service has begun execution.
+░░ 
+░░ The job identifier is 1973.
+Mar 12 11:11:43 Nagisa systemd[1]: Started Network Manager Script Dispatcher Service.
+░░ Subject: A start job for unit NetworkManager-dispatcher.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ A start job for unit NetworkManager-dispatcher.service has finished successfully.
+░░ 
+░░ The job identifier is 1973.
+Mar 12 11:11:53 Nagisa systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░ 
+░░ The unit NetworkManager-dispatcher.service has successfully entered the 'dead' state.
+Mar 12 11:28:27 Nagisa wpa_supplicant[1100]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=0 noise=9999 txrate=390000
+Mar 12 11:28:27 Nagisa wpa_supplicant[1100]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=0 noise=9999 txrate=390000
+Mar 12 11:28:27 Nagisa wpa_supplicant[1100]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=0 noise=9999 txrate=390000
+Mar 12 11:28:27 Nagisa wpa_supplicant[1100]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=0 noise=9999 txrate=390000
+Mar 12 11:28:28 Nagisa wpa_supplicant[1100]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=0 noise=9999 txrate=390000
