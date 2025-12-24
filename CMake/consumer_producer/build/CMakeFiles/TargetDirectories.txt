@@ -1,0 +1,3 @@
+/home/Nagisa/Documents/CppCode/CMake/consumer_producer/build/CMakeFiles/MyProducerConsumer.dir
+/home/Nagisa/Documents/CppCode/CMake/consumer_producer/build/CMakeFiles/edit_cache.dir
+/home/Nagisa/Documents/CppCode/CMake/consumer_producer/build/CMakeFiles/rebuild_cache.dir

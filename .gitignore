@@ -4,4 +4,13 @@
 # didn't dismiss these folders and files
 
 !.gitignore
-!
+!README.md
+!advanced_c_c++/
+!advanced_c_c++/**
+!tempC_C++/
+!tempC_C++/**
+!makefile/
+!makefile/**
+!CMake/
+!CMake/**
+
