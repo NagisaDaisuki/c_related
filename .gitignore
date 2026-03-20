@@ -13,4 +13,6 @@
 !makefile/**
 !CMake/
 !CMake/**
+!data_structure/
+!data_structure/**
 
