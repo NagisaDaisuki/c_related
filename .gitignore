@@ -1,18 +1,31 @@
-# ignore all files
-*
+# 1. 仅忽略根目录下的文件和文件夹（绝不向下递归误伤源代码！）
+/*
 
-# didn't dismiss these folders and files
-
+# 2. 白名单：只捞回这些需要追踪的核心文件和目录
 !.gitignore
 !README.md
 !advanced_c_c++/
-!advanced_c_c++/**
 !tempC_C++/
-!tempC_C++/**
 !makefile/
-!makefile/**
 !CMake/
-!CMake/**
 !data_structure/
-!data_structure/**
 
+# 3. 公共黑名单：精准狙击所有子目录里的编译垃圾
+*.o
+*.out
+*.exe
+*.swp
+
+# --- C/C++ 工程常见垃圾补充 ---
+# 忽略 CMake 生成的构建目录和缓存（非常重要）
+build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# 忽略系统或编辑器产生的垃圾文件
+.DS_Store
+.vscode/
+.cache/
