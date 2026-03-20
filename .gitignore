@@ -29,3 +29,6 @@ compile_commands.json
 .DS_Store
 .vscode/
 .cache/
+
+# 忽略Homework 下的exec目录
+exec/
