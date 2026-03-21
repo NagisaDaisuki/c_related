@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -10,16 +9,15 @@ typedef char ElemType;
 
 struct LNode {
   ElemType data; // 数据域
+  LNode *prev;   // 指针域
   LNode *next;   // 指针域
 };
 
-// *LinkList为LNode类型的指针
-int initList_L(LNode *&L) {
-
-  // if (L != NULL)
-  //   return ERROR;
+// *LinkList为Lnode类型的指针
+int InitList_L(LNode *&L) {
   L = new LNode;
   L->data = ' ';
+  L->prev = NULL;
   L->next = NULL;
   return OK;
 }
@@ -31,10 +29,12 @@ LNode *LocateElem_L(LNode *L, ElemType e) {
     return NULL;
 
   LNode *p = L->next;
-  while (p->next != NULL && p->data != e)
+  while (p != NULL && p->data != e) {
     p = p->next;
-  if (p->data == e)
+  }
+  if (p->data == e) {
     return p;
+  }
   return NULL;
 }
 
@@ -48,10 +48,13 @@ int ListInsert_L(LNode *&L, int i, ElemType e) {
   }
   if (!p || j > i - 1)
     return ERROR;
-  LNode *InsertNode = new LNode;
-  InsertNode->data = e;
-  InsertNode->next = p->next;
-  p->next = InsertNode;
+  LNode *q = new LNode;
+  q->data = e;
+  q->next = p->next;
+  q->prev = p;
+  if (p->next != NULL)
+    p->next->prev = q; // 后面挂前面
+  p->next = q;
   return OK;
 }
 
@@ -59,22 +62,30 @@ int ListInsert_L(LNode *&L, int i, ElemType e) {
 int ListDelete_L(LNode *&L, int i, ElemType &e) {
   LNode *p = L;
   int j = 0;
-  while (p->next && j < i - 1) { // 寻找第i个结点，并令p指向其前驱
+  while (p->next && j < i) {
     p = p->next;
     ++j;
   }
-  if (!(p->next) || j > i - 1)
-    return ERROR;     // 删除位置不合理
-  LNode *q = p->next; // 绑住要删除的节点
+  if (!p)
+    return ERROR;
+  if (j < i)
+    return ERROR;
+  LNode *q = p;
   e = q->data;
-  p->next = q->next;
-  delete q; // 释放删除结点的空间
+  p->prev->next = p->next;
+  // 确认删除节点后节点是一个非NULL节点
+  if (p->next != NULL)
+    p->next->prev = p->prev;
+  delete q;
+
   return OK;
 }
 
 int DestroyList_L(LNode *&L) {
-  LNode *p;
-  p = L;
+  if (L == NULL)
+    return OK;
+
+  LNode *p = L;
   LNode *q;
   while (p != NULL) {
     q = p;
@@ -86,15 +97,19 @@ int DestroyList_L(LNode *&L) {
 }
 
 void CreateList_F(LNode *&L, int n) {
-  if (initList_L(L) != OK)
+  // 先建立一个带头结点的单链表
+  if (InitList_L(L) != OK)
     return;
 
-  // 先建立一个带头结点的单链表
-  for (int i = n; i > 0; --i) {
+  for (int i = n; i > 0; i--) {
     LNode *p = new LNode; // 生成新结点
     cin >> p->data;       // 输入元素值
+
+    p->prev = L;
     p->next = L->next;
-    L->next = p; // 插入到表头
+    if (L->next != NULL)
+      L->next->prev = p;
+    L->next = p;
   }
 }
 
@@ -107,14 +122,26 @@ void output(LNode *L) {
   cout << endl;
 }
 
-int main(void) {
-  LNode *head; // 创建头结点
+void invoutput(LNode *L) {
+  LNode *T = L;
+  while (T->next != NULL) {
+    T = T->next;
+  }
+  while (T != L) {
+    cout << T->data << ' ';
+    T = T->prev;
+  }
+  cout << endl;
+}
+
+int main() {
+  LNode *head;
 
   // 创建链表
   int n;
   cin >> n;
   CreateList_F(head, n);
-  output(head);
+  invoutput(head);
 
   // 插入元素
   int loc;
@@ -122,9 +149,9 @@ int main(void) {
   cin >> loc;
   cin >> ne;
   ListInsert_L(head, loc, ne);
-  output(head);
+  invoutput(head);
 
-  // 定位并输出其下一个元素
+  // 定位并输出其下一个
   cin >> ne;
   LNode *pt = LocateElem_L(head, ne);
   if (pt == NULL)
@@ -133,14 +160,15 @@ int main(void) {
     cout << "NULL" << endl;
   else
     cout << pt->next->data << endl;
-  output(head);
+  invoutput(head);
 
   // 删除元素
   cin >> loc;
   ListDelete_L(head, loc, ne);
-  output(head);
+  invoutput(head);
 
   // 销毁链表
   DestroyList_L(head);
-  return EXIT_SUCCESS;
+
+  return 0;
 }
