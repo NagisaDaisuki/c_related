@@ -8,7 +8,7 @@
 !tempC_C++/
 !makefile/
 !CMake/
-!data_structure/
+!data_structure_and_algorithm/
 
 # 3. 公共黑名单：精准狙击所有子目录里的编译垃圾
 *.o

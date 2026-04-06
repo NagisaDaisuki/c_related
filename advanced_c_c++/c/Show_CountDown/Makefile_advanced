@@ -1,0 +1,96 @@
+# Makefile for Timer Project
+# Builds both C and C++ versions
+
+CC = gcc
+CXX = g++
+
+# 🌟 1. 注入魔法依赖参数
+DEPFLAGS = -MMD -MP
+
+# 把依赖参数合并进编译参数里
+CFLAGS = -Wall -Wextra -Iinclude -Icommon -O2 $(DEPFLAGS)
+CXXFLAGS = -Wall -Wextra -Iinclude -Icommon -O2 $(DEPFLAGS)
+LDFLAGS = -lncurses
+
+# Directories
+SRC_C = src/c
+SRC_CPP = src/cpp
+COMMON = common
+
+# Common objects 
+COMMON_OBJ = $(COMMON)/color.o
+
+# C targets
+C_TARGET = timer-c
+C_SRCS = $(wildcard $(SRC_C)/*.c)
+C_OBJS = $(C_SRCS:.c=.o)
+
+# C++ targets
+CPP_TARGET = timer-cpp
+CPP_SRCS = $(wildcard $(SRC_CPP)/*.cpp)
+CPP_OBJS = $(CPP_SRCS:.cpp=.o)
+
+# 🌟 2. 收集所有将要生成的 .d 文件名单
+DEPS = $(C_OBJS:.o=.d) $(CPP_OBJS:.o=.d) $(COMMON_OBJ:.o=.d)
+
+.PHONY: all clean install run-c run-cpp help
+
+all: $(C_TARGET) $(CPP_TARGET)
+
+# Build C version
+$(C_TARGET): $(C_OBJS) $(COMMON_OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(SRC_C)/%.o : $(SRC_C)/%.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# 🚨 注意：这里原来手写的 main.o 和 timer.o 依赖被我彻底删除了！爽！
+
+# Build C++ version
+$(CPP_TARGET): $(CPP_OBJS) $(COMMON_OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(SRC_CPP)/%.o: $(SRC_CPP)/%.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+# 🚨 注意：C++ 原来手写的依赖也被彻底删除了！
+
+# Common objects 
+$(COMMON_OBJ): $(COMMON)/color.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Run commands
+run-c: $(C_TARGET)
+	./$(C_TARGET) -m 30
+
+run-cpp: $(CPP_TARGET)
+	./$(CPP_TARGET) -m 30
+
+# Clean
+clean:
+	rm -f $(C_TARGET) $(CPP_TARGET)
+	rm -f $(C_OBJS) $(CPP_OBJS) $(COMMON_OBJ)
+	rm -f $(DEPS)  # 🌟 清理时，别忘了把生成的 .d 垃圾文件也删掉
+
+# Install to local bin
+install: all
+	install -Dm755 $(C_TARGET) ~/.local/bin/timer-c
+	install -Dm755 $(CPP_TARGET) ~/.local/bin/timer-cpp
+
+# Help
+help:
+	@echo "Timer Project - Makefile targets:"
+	@echo "  all          - Build both C and C++ versions"
+	@echo "  clean        - Remove built executables and objects"
+	@echo "  run-c        - Run C version (30 min timer)"
+	@echo "  run-cpp      - Run C++ version (30 min timer)"
+	@echo "  install      - Install binaries to ~/.local/bin"
+	@echo "  help         - Show this help message"
+	@echo ""
+	@echo "Options:"
+	@echo "  -m <minutes> - Set timer duration"
+	@echo "  -c <color>   - Set source color for matugen"
+
+# 🌟 3. 在文件最末尾，把所有生成的 .d 文件包含进来！
+# 前面的减号 (-) 极其关键：代表如果 .d 文件还不存在（比如第一次编译时），不要报错，直接忽略。
+-include $(DEPS)
