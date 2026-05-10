@@ -1,0 +1,11 @@
+{
+    "name": "Tom",
+    "age": 18,
+    "height": 175.5,
+    "is_student": true,
+    "skills": ["C", "C++", "Linux"],
+    "address": {
+        "city": "Beijing",
+        "school": "Tsinghua"
+    }
+}

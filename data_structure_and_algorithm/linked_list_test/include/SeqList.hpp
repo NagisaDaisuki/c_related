@@ -1,4 +1,6 @@
 #pragma once
+#include <algorithm>
+#include <initializer_list>
 #include <iostream>
 #include <memory> // 引入 memory 头文件使用智能指针
 #include <stdexcept>
@@ -31,6 +33,24 @@ public:
   // 构造函数：直接用 make_unique 在堆上捏出数组
   SeqList(size_t init_cap = 10) : length{0}, capacity{init_cap} {
     data = std::make_unique<T[]>(capacity);
+  }
+
+  // 初始化列表
+  // SeqList(std::initializer_list<T> list) : SeqList(list.size()) {
+  //   // 使用范围 for 循环遍历 initializer_list
+  //   for (const T &val : list) {
+  //     data[length] = val;
+  //     length++;
+  //   }
+  // }
+
+  // 使用 algorithm 的 std::copy()直接拷贝到data管理的裸指针
+  SeqList(std::initializer_list<T> list) : SeqList(list.size()) {
+    // 把 list 里的数据从头到尾直接拷贝到 data 管理的裸指针内存中
+    std::copy(list.begin(), list.end(), data.get());
+
+    // 拷贝完直接更新总长度
+    length = list.size();
   }
 
   // 析构函数不需要了，因为智能指针 unique_ptr 已经帮我们把事情办好了

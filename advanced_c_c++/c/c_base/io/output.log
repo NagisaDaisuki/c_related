@@ -1,0 +1,111 @@
+     1	// 复印一个结构体数组
+     2	#include "player.h"
+     3	#include <stdio.h>
+     4	#include <stdlib.h>
+     5	
+     6	int main() {
+     7	  // 准备要在内存中写出的数据
+     8	  Player team[3] = {
+     9	      {101, 50, 99.5},
+    10	      {102, 30, 45.0},
+    11	      {103, 99, 150.0},
+    12	  };
+    13	
+    14	  // 1. 打开文件 (wb = Write Binary 写 二进制 文件)
+    15	  FILE *file = fopen("sava_data.bin", "wb");
+    16	  if (file == NULL) {
+    17	    perror("文件打开失败");
+    18	    return 1;
+    19	  }
+    20	
+    21	  // 2. 核心操作：一键复印内存!
+    22	  // 意思是：把 team 数组首地址开始，大小为 sizeof(Player)的数据，写 3 份到 file
+    23	  // 中
+    24	  size_t written_count = fwrite(team, sizeof(Player), 3, file);
+    25	
+    26	  // 3. 检查有没有写够（及其良好的工程习惯）
+    27	  if (written_count != 3) {
+    28	    fprintf(stderr, "警告：只成功写入了 %zu 个 元素！\n", written_count);
+    29	  } else {
+    30	    printf("成功将 3 个玩家数据写入二进制文件！\n");
+    31	  }
+    32	
+    33	  // 4. 关门
+    34	  fclose(file);
+    35	
+    36	  return EXIT_SUCCESS;
+    37	}
+    38	// 复印一个结构体数组
+    39	#include "player.h"
+    40	#include <stdio.h>
+    41	#include <stdlib.h>
+    42	
+    43	int main() {
+    44	  // 准备要在内存中写出的数据
+    45	  Player team[3] = {
+    46	      {101, 50, 99.5},
+    47	      {102, 30, 45.0},
+    48	      {103, 99, 150.0},
+    49	  };
+    50	
+    51	  // 1. 打开文件 (wb = Write Binary 写 二进制 文件)
+    52	  FILE *file = fopen("sava_data.bin", "wb");
+    53	  if (file == NULL) {
+    54	    perror("文件打开失败");
+    55	    return 1;
+    56	  }
+    57	
+    58	  // 2. 核心操作：一键复印内存!
+    59	  // 意思是：把 team 数组首地址开始，大小为 sizeof(Player)的数据，写 3 份到 file
+    60	  // 中
+    61	  size_t written_count = fwrite(team, sizeof(Player), 3, file);
+    62	
+    63	  // 3. 检查有没有写够（及其良好的工程习惯）
+    64	  if (written_count != 3) {
+    65	    fprintf(stderr, "警告：只成功写入了 %zu 个 元素！\n", written_count);
+    66	  } else {
+    67	    printf("成功将 3 个玩家数据写入二进制文件！\n");
+    68	  }
+    69	
+    70	  // 4. 关门
+    71	  fclose(file);
+    72	
+    73	  return EXIT_SUCCESS;
+    74	}
+    75	// 复印一个结构体数组
+    76	#include "player.h"
+    77	#include <stdio.h>
+    78	#include <stdlib.h>
+    79	
+    80	int main() {
+    81	  // 准备要在内存中写出的数据
+    82	  Player team[3] = {
+    83	      {101, 50, 99.5},
+    84	      {102, 30, 45.0},
+    85	      {103, 99, 150.0},
+    86	  };
+    87	
+    88	  // 1. 打开文件 (wb = Write Binary 写 二进制 文件)
+    89	  FILE *file = fopen("sava_data.bin", "wb");
+    90	  if (file == NULL) {
+    91	    perror("文件打开失败");
+    92	    return 1;
+    93	  }
+    94	
+    95	  // 2. 核心操作：一键复印内存!
+    96	  // 意思是：把 team 数组首地址开始，大小为 sizeof(Player)的数据，写 3 份到 file
+    97	  // 中
+    98	  size_t written_count = fwrite(team, sizeof(Player), 3, file);
+    99	
+   100	  // 3. 检查有没有写够（及其良好的工程习惯）
+   101	  if (written_count != 3) {
+   102	    fprintf(stderr, "警告：只成功写入了 %zu 个 元素！\n", written_count);
+   103	  } else {
+   104	    printf("成功将 3 个玩家数据写入二进制文件！\n");
+   105	  }
+   106	
+   107	  // 4. 关门
+   108	  fclose(file);
+   109	
+   110	  return EXIT_SUCCESS;
+   111	}

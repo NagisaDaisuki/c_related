@@ -63,7 +63,7 @@ template <typename T> void SingleList<T>::insert(size_t index, const T &val) {
     throw std::out_of_range("Insert index out of range");
 
   Node *p = head;
-  for (int i = 0; i < index; i++)
+  for (size_t i = 0; i < index; i++)
     p = p->next;
   p->next = new Node(val, p->next);
   length++;
@@ -74,7 +74,7 @@ template <typename T> void SingleList<T>::remove(size_t index) {
     throw std::out_of_range("Remove index out of range");
 
   Node *p = head;
-  for (int i = 0; i < index; i++)
+  for (size_t i = 0; i < index; i++)
     p = p->next;
   Node *q = p->next;
   p->next = q->next;
@@ -87,7 +87,7 @@ template <typename T> void SingleList<T>::update(size_t index, const T &val) {
     throw std::out_of_range("Update index out of range");
 
   Node *p = head->next;
-  for (int i = 0; i < index; i++)
+  for (size_t i = 0; i < index; i++)
     p = p->next;
   p->data = val;
 }
@@ -97,7 +97,7 @@ template <typename T> T SingleList<T>::get(size_t index) const {
     throw std::out_of_range("Get index out of range");
 
   Node *p = head->next;
-  for (int i = 0; i < index; i++)
+  for (size_t i = 0; i < index; i++)
     p = p->next;
   return p->data;
 }

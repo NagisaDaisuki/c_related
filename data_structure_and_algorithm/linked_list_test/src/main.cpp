@@ -1,5 +1,7 @@
+#include "../include/DoubleList.hpp"
 #include "../include/SeqList.hpp"
 #include "../include/SingleList.hpp"
+
 #include <cstdlib>
 #include <iostream>
 #include <string>
@@ -24,29 +26,34 @@ int main(void) {
   StringList.print();
 
   std::cout << "============= 单链表 ==================\n";
-  SingleList<double> doubleList{1.1, 3.2, 5.4, 1.54, 3.39, 6.28};
+  SingleList<double> singleList{1.1, 3.2, 5.4, 1.54, 3.39, 6.28};
   std::cout << "打印 使用initializer_list 初始化的 单链表：\n";
-  doubleList.print();
-  std::cout << "输入一个不大于" << doubleList.size() << "的插入位置并插入值\n";
+  singleList.print();
+  std::cout << "输入一个不大于" << singleList.size() << "的插入位置并插入值\n";
   double val1 = 0.0;
-  int index = 0;
-  if (std::cin >> index && std::cin >> val1 && index <= doubleList.size()) {
-    doubleList.insert(index, val1);
+  size_t index = 0;
+  if (std::cin >> index && std::cin >> val1 && index <= singleList.size()) {
+    singleList.insert(index, val1);
   }
   std::cout << "插入后的链表：\n";
-  doubleList.print();
+  singleList.print();
   std::cout << "更新链表内元素,先位置后元素：\n";
-  if (std::cin >> index && std::cin >> val1 && index < doubleList.size()) {
-    doubleList.update(index, val1);
+  if (std::cin >> index && std::cin >> val1 && index < singleList.size()) {
+    singleList.update(index, val1);
   }
   std::cout << "更新后的链表：\n";
-  doubleList.print();
+  singleList.print();
 
   std::cout << "移除链表中指定位置元素：\n";
-  if (std::cin >> index && index < doubleList.size()) {
-    doubleList.remove(index);
+  if (std::cin >> index && index < singleList.size()) {
+    singleList.remove(index);
   }
   std::cout << "移除后的链表：\n";
+  singleList.print();
+
+  std::cout << "==================== 双链表 =======================\n";
+  DoubleList<std::string> doubleList = {"Everything", "I",   "found",
+                                        "great",      "was", "sunfaded."};
   doubleList.print();
 
   return EXIT_SUCCESS;

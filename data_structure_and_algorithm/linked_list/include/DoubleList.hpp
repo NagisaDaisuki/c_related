@@ -65,7 +65,12 @@ public:
 
     // 旁路断开
     p->prev->next = p->next;
-    p->next->prev = p->prev;
+    if (p->next != nullptr)
+      p->next->prev = p->prev;
+
+    delete p;
+
+    length--;
   }
 
   // 改
