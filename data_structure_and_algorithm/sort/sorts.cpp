@@ -302,14 +302,89 @@ void MergeSort(vector<T> &arr, Compare comp = Compare()) {
   MergeSortImpl(arr, temp, 0, static_cast<int>(arr.size()) - 1, comp);
 }
 
+// ========================= 6. 快速排序 =========================
+//
+
+// 选一个“基准值（pivot）”，把数组划分成“左边都比它小、
+// 右边都比它大”的两部分，然后递归地继续排左右两边。
+// 分治法
+
+/*  平均时间复杂度 O(n log n)
+ *  常数很小
+    缓存友好
+    原地排序
+ * */
+/*
+ *[left ... i]        <= pivot
+  [i+1 ... j-1]       > pivot
+  [j ... right-1]     未处理
+  [right]             pivot
+
+ * */
+
+// i 是 “当前 <= pivot 区域的最后一个位置”
+// j 是 扫描指针 left -> right-1, 不取 right 是 pivot本身
+template <typename T, typename Compare = std::less<T>>
+int partition(vector<T> &arr, int left, int right, Compare comp) {
+  T pivot = arr[right]; // Lomuto Partition Scheme（洛穆托划分）
+  int i = left - 1;     // 首次从 -1 开始，因为一开始没有有序序列
+
+  for (int j = left; j < right; ++j) {
+    if (!comp(pivot, arr[j])) { // arr[j] <= pivot
+      ++i; // 小于 pivot 的元素移动 到 i的位置(pivot区域最后位置)
+      std::swap(arr[i], arr[j]);
+    }
+  }
+  std::swap(arr[i + 1], arr[right]); // 最后将 pivot 移动到 pivot区域最后位置
+  return i + 1;                      // 返回 pivot 值索引
+}
+
+template <typename T, typename Compare = std::less<T>>
+void quickSortImpl(vector<T> &arr, int left, int right,
+                   Compare comp = Compare()) {
+  if (left >= right)
+    return;
+  int pi = partition(arr, left, right, comp);
+  quickSortImpl(arr, left, pi - 1, comp);
+  quickSortImpl(arr, pi + 1, right, comp);
+}
+
+template <typename T, typename Compare = std::less<T>>
+void quickSort(vector<T> &arr, Compare comp = Compare()) {
+  if (arr.size() < 2)
+    return;
+  quickSortImpl(arr, 0, static_cast<int>(arr.size()) - 1, comp);
+}
+
+void InitIntVecRandom(vector<int> &arr,
+                      std::uniform_int_distribution<int> &dist,
+                      std::mt19937 &gen) {
+  for (int i = 0; i < 10; i++) {
+    arr.push_back(dist(gen));
+  }
+}
 int main(void) {
 
-  vector<int> arr{3, 5, 2, 4, 8, 6, 10, 9};
+  // 生成 随机数
+
+  // 随机种子
+  std::random_device rd;
+
+  // 随机数引擎
+  std::mt19937 gen(rd());
+
+  // 整数分布
+  std::uniform_int_distribution<int> dist(1, 100);
+
+  vector<int> arr{};
+  InitIntVecRandom(arr, dist, gen);
+  // vector<int> arr{3, 5, 2, 4, 8, 6, 10, 9};
+
   cout << "排序前：" << "\n";
   printVector(arr);
   // SelectionSort(arr, [](int a, int b) { return a > b; });
-  MergeSort(arr, [](int a, int b) { return a > b; });
+  quickSort(arr, [](int a, int b) { return a < b; });
   cout << "排序后：" << "\n";
-  printVector(arr, "MergeSort");
+  printVector(arr, "QuickSort");
   return EXIT_SUCCESS;
 }
