@@ -1,0 +1,3 @@
+This information will showcase in log.txt instead of current terminal
+freopen successfully change the direction of standard output.
+-- 程序结束 --

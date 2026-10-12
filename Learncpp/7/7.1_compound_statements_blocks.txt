@@ -1,0 +1,2 @@
+Keep the nesting level of your functions to 3 or less. If your function has a need for more nested levels, consider refactoring your function into sub-functions.
+函数嵌套层数最好控制在三层或以下。如果函数需要更多嵌套层数，请考虑将其重构为子函数。
